@@ -76,15 +76,25 @@ gcc "Quick Sort.c" -o quick_sort_runtime
 
 ---
 
+## 💻 System Prerequisites & Verification
+
+Before executing the compilation pipeline, ensure your local environment satisfies the following baseline configuration:
+
+- **Operating System:** Cross-platform support (Windows 10/11 via PowerShell/CMD, Linux/GNU, or macOS).
+- **Compiler Framework:** GCC (v9.0+) or Clang compiler toolchain installed and mapped to system execution paths.
+- **Shell Environment:** Git Bash, PowerShell, or standard Zsh terminal architectures.
+
+---
+
 ## 🛠️ Contribution & Development Lifecycle
 
 Got an optimization patch for the Graph structures or a faster pivot strategy for Quick Sort? Contributions are always welcome!
 
-1. Fork the repository pipelines.
-2. Create your feature tracking branch (git checkout -b feature/OptimizedDS).
-3. Commit your analytical code blocks (git commit -m 'feat: optimize tree node allocation').
-4. Push directly to the remote origin (git push origin feature/OptimizedDS).
-5. Open a formal Pull Request for architectural review.
+1. **Fork** the repository pipelines.
+2. Create your feature tracking branch (`git checkout -b feature/OptimizedDS`).
+3. Commit your analytical code blocks (`git commit -m 'feat: optimize tree node allocation'`).
+4. Push directly to the remote origin (`git push origin feature/OptimizedDS`).
+5. Open a formal **Pull Request** for architectural review.
 
 ---
 
@@ -92,8 +102,8 @@ Got an optimization patch for the Graph structures or a faster pivot strategy fo
 
 - Name: Rudranarayan Jena
 - Role: Systems Architect & Lead Full-Stack Engineer
-- Organization: Founder @ Voxion-Labs
-- GitHub: @liambrooks-lab
+- Organization: Founder/Lead at Voxion-Labs
+- GitHub: <a href="https://github.com/liambrooks-lab">liambrooks-lab</a>
 
 ---
 
