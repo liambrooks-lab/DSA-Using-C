@@ -1,111 +1,223 @@
 # DSA Using C
 
-Welcome to the ultimate repository for Data Structures and Algorithms implemented natively in C. This repository contains **20 robust, production-grade, and intermediate-level programs** structured to match academic laboratory curriculum with industry-standard code design.
+A structured collection of **Data Structures and Algorithms implemented in C**, created for academic practice, problem-solving, and building a strong foundation in core computer science concepts.
+
+The repository contains **20 implementations** covering fundamental searching, sorting, linear data structures, trees, and graph algorithms. Each implementation is written in standard C with a focus on readable logic, conventional naming, and practical understanding of the underlying algorithms.
 
 ---
 
 ## Table of Contents
 
-- [Key Architectural Features](#key-architectural-features)
-- [Repository Blueprint](#repository-blueprint)
-- [Execution & Compilation Guide](#execution--compilation-guide)
-- [Contribution & Development Lifecycle](#contribution--development-lifecycle)
-- [Author](#author)
-- [License](#license)
+* [Topics Covered](#topics-covered)
+* [Repository Structure](#repository-structure)
+* [Compilation and Execution](#compilation-and-execution)
+* [Complexity Reference](#complexity-reference)
+* [Requirements](#requirements)
+* [Contributing](#contributing)
+* [Author](#author)
+* [License](#license)
 
 ---
 
-## 🛠️ Key Architectural Features
+## Topics Covered
 
-* **Dynamic Memory Management:** Deep integration of `malloc()` and pointer references across linked lists and trees.
-* **Optimized Execution Paths:** Includes logic improvements, such as early-termination flags in sorting algorithms to reduce execution overhead.
-* **Modular Codebase:** Clean separation of business logic with descriptive naming conventions and minimal reliance on hardcoded limits.
+### Arrays
+
+Basic operations and searching techniques using one-dimensional and two-dimensional arrays.
+
+**Includes:**
+
+* 1D and 2D array operations
+* Linear search
+* Binary search
+
+### Sorting
+
+Implementation of commonly used comparison and non-comparison sorting algorithms.
+
+**Includes:**
+
+* Bubble sort
+* Insertion sort
+* Selection sort
+* Merge sort
+* Quick sort
+* Radix sort
+
+### Stacks and Queues
+
+Implementations of fundamental linear data structures using arrays.
+
+**Includes:**
+
+* Stack operations
+* Linear queue
+* Circular queue
+
+### Linked Lists
+
+Dynamic data structures demonstrating node creation, traversal, and pointer manipulation.
+
+**Includes:**
+
+* Singly linked list
+* Doubly linked list
+* Circular linked list
+
+### Trees
+
+Basic tree construction and traversal techniques.
+
+**Includes:**
+
+* Tree data structure
+* Tree traversal
+* Inorder, preorder, and postorder traversal
+
+### Graphs
+
+Fundamental graph representation and traversal techniques.
+
+**Includes:**
+
+* Adjacency matrix
+* Breadth-First Search (BFS)
+* Depth-First Search (DFS)
 
 ---
 
-## 📁 Repository Blueprint
-
-Here is how the data structures are organized across the subsystem pipelines:
+## Repository Structure
 
 ```text
 DSA-Using-C/
+│
+├── arrays/
+│   ├── array_operations_1d_2d.c
+│   ├── linear_search.c
+│   └── binary_search.c
+│
 ├── sorting/
-│   ├── Bubble Sort.c
-│   ├── Insertion Sort.c
-│   ├── Selection Sort.c
-│   ├── Merge Sort.c
-│   ├── Quick Sort.c
-│   └── Radix Sort.c
-├── stack and queue/
-│   ├── Stack Operations.c
-│   ├── Linear Queue.c
-│   └── Circular Queue.c
-├── linked list/
-│   ├── Single Linked List.c
-│   ├── Double Linked List.c
-│   └── Circular Linked List.c
+│   ├── bubble_sort.c
+│   ├── insertion_sort.c
+│   ├── selection_sort.c
+│   ├── merge_sort.c
+│   ├── quick_sort.c
+│   └── radix_sort.c
+│
+├── stacks_and_queues/
+│   ├── stack_operations.c
+│   ├── linear_queue.c
+│   └── circular_queue.c
+│
+├── linked_lists/
+│   ├── singly_linked_list.c
+│   ├── doubly_linked_list.c
+│   └── circular_linked_list.c
+│
 ├── trees/
-│   ├── Tree Data Structure.c
-│   └── Tree Traversal.c
+│   ├── tree_data_structure.c
+│   └── tree_traversal.c
+│
 ├── graphs/
-│   ├── Adjacency Matrix.c
-│   ├── DFS Graph Traversal.c
-│   └── BFS Graph Traversal.c
-└── Core Arrays/
-    ├── 1D and 2D Array Operations.c
-    ├── Linear Search.c
-    └── Binary Search.c
+│   ├── adjacency_matrix.c
+│   ├── bfs_graph_traversal.c
+│   └── dfs_graph_traversal.c
+│
+├── LICENSE
+└── README.md
 ```
 
 ---
 
-## Execution & Compilation Guide
+## Compilation and Execution
 
-To compile and execute any module locally, ensure you have a standard C compiler (gcc or clang) mapped to your system environment paths.
+Each program can be compiled independently with GCC or Clang.
+
+### Example
 
 ```bash
-# 1. Navigate to the specific subsystem directory
-cd "sorting"
+cd sorting
+gcc quick_sort.c -o quick_sort
+./quick_sort
+```
 
-# 2. Compile the target codebase using GCC
-gcc "Quick Sort.c" -o quick_sort_runtime
+On Windows PowerShell:
 
-# 3. Fire up the compiled binary framework
-./quick_sort_runtime
+```powershell
+cd sorting
+gcc .\quick_sort.c -o quick_sort.exe
+.\quick_sort.exe
+```
+
+You can replace `quick_sort.c` with any other source file in the repository.
+
+For stricter compilation and better warning detection:
+
+```bash
+gcc -std=c11 -Wall -Wextra -Wpedantic quick_sort.c -o quick_sort
 ```
 
 ---
 
-## 💻 System Prerequisites & Verification
+## Complexity Reference
 
-Before executing the compilation pipeline, ensure your local environment satisfies the following baseline configuration:
+| Algorithm      |       Best |    Average |      Worst |
+| -------------- | ---------: | ---------: | ---------: |
+| Bubble Sort    |       O(n) |      O(n²) |      O(n²) |
+| Insertion Sort |       O(n) |      O(n²) |      O(n²) |
+| Selection Sort |      O(n²) |      O(n²) |      O(n²) |
+| Merge Sort     | O(n log n) | O(n log n) | O(n log n) |
+| Quick Sort     | O(n log n) | O(n log n) |      O(n²) |
+| Radix Sort     |      O(nk) |      O(nk) |      O(nk) |
+| Linear Search  |       O(1) |       O(n) |       O(n) |
+| Binary Search  |       O(1) |   O(log n) |   O(log n) |
+| BFS            |   O(V + E) |   O(V + E) |   O(V + E) |
+| DFS            |   O(V + E) |   O(V + E) |   O(V + E) |
 
-- **Operating System:** Cross-platform support (Windows 10/11 via PowerShell/CMD, Linux/GNU, or macOS).
-- **Compiler Framework:** GCC (v9.0+) or Clang compiler toolchain installed and mapped to system execution paths.
-- **Shell Environment:** Git Bash, PowerShell, or standard Zsh terminal architectures.
-
----
-
-## 🛠️ Contribution & Development Lifecycle
-
-Got an optimization patch for the Graph structures or a faster pivot strategy for Quick Sort? Contributions are always welcome!
-
-1. **Fork** the repository pipelines.
-2. Create your feature tracking branch (`git checkout -b feature/OptimizedDS`).
-3. Commit your analytical code blocks (`git commit -m 'feat: optimize tree node allocation'`).
-4. Push directly to the remote origin (`git push origin feature/OptimizedDS`).
-5. Open a formal **Pull Request** for architectural review.
+The exact memory requirements vary by implementation and data structure.
 
 ---
 
-## 👤 Author
+## Requirements
 
-- Name: Rudranarayan Jena
-- Role: Systems Architect & Lead Full-Stack Engineer
-- Organization: Founder/Lead at Voxion-Labs
-- GitHub: <a href="https://github.com/liambrooks-lab">liambrooks-lab</a>
+* **C compiler:** GCC or Clang
+* **C standard:** C11 recommended
+* **Supported environments:** Windows, Linux, and macOS
+* **Shell:** PowerShell, CMD, Bash, or Zsh
+
+No external libraries are required.
 
 ---
 
-## 📜 License
-This repository is configured under the standard MIT License. Feel free to fork it, break it, modify it, or use it to ace your lab examinations!
+## Contributing
+
+Contributions, corrections, optimisations, and additional DSA implementations are welcome.
+
+For changes:
+
+```bash
+git checkout -b feature/your-feature
+git add .
+git commit -m "feat: improve quick sort implementation"
+git push origin feature/your-feature
+```
+
+Then open a Pull Request with a clear description of the changes.
+
+---
+
+## Author
+
+**Rudranarayan Jena**
+
+Founder & Lead Researcher, **Voxion Labs**
+
+GitHub: [liambrooks-lab](https://github.com/liambrooks-lab)
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+See [LICENSE](LICENSE) for the full license text.
